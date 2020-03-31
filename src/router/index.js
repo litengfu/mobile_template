@@ -4,6 +4,10 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {
+    path:'/',
+    redirect:'/home'
+  },
+  {
     name: 'home',
     path: '/home',
     component: () => import('@/view/home/home'),

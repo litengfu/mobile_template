@@ -1,5 +1,18 @@
 @import "variables";
 
+@mixin border-1px ($color) {
+  position: relative;
+  &:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-top: 1Px solid $color;
+      content: '';
+  }
+}
+
 //flex-center
 @mixin flex-center($direction: row){
   display: flex;
