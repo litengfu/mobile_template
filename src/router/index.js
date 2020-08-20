@@ -4,41 +4,33 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {
+    name:'/',
     path:'/',
-    redirect:'/home'
-  },
-  {
-    name: 'home',
-    path: '/home',
-    component: () => import('@/view/home/home'),
-    children: [
-      // {
-      //   name: 'home-product',
-      //   path: 'product/:id',
-      //   component: () => import('@/view/product/product')
-      // }
+    redirect:'/home',
+    component: () => import('@/view/index'),
+    children:[
+      {
+        name: 'home',
+        path: '/home',
+        component: () => import('@/view/home/home'),
+      },
+      {
+        name: 'category',
+        path: '/category',
+        component: () => import('@/view/category/category')
+      },
+      {
+        name: 'cart',
+        path: '/cart',
+        component: () => import('@/view/cart/cart')
+      },
+      {
+        name: 'personal',
+        path: '/personal',
+        component: () => import('@/view/personal/personal')
+      },
     ]
   },
-  {
-    name: 'category',
-    path: '/category',
-    component: () => import('@/view/category/category')
-  },
-  {
-    name: 'cart',
-    path: '/cart',
-    component: () => import('@/view/cart/cart')
-  },
-  {
-    name: 'personal',
-    path: '/personal',
-    component: () => import('@/view/personal/personal')
-  },
-  // {
-  //   path: '/index',
-  //   name: 'helloWorld',
-  //   component: () => import('@/views/HelloWorld'),
-  // },
   // {
   //   path: '/login',
   //   name: 'login',

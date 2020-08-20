@@ -68,11 +68,6 @@ ins, a {
 a, img {
   -webkit-touch-callout: none; //
 }
-img {
-  border: none;
-  /*display: block;*/
-  vertical-align: top;
-}
 
 table { // 去掉各table cell的边距并让其边重合
   border-spacing: 0;
